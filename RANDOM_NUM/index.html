@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>RANDOM NUMBERS</title>
+ <link rel="stylesheet" href="styles.css"/>
+    
+</head>
+<body>
+<div id="page-1" class="page">
+		<h1>The Higher or Lower Game</h1>
+		<button data-limit="10">EASY</button>
+		<button data-limit="100">NORMAL</button>
+		<button data-limit="1000">HARD</button>
+</div>
+
+<div id="page-2" class="page">
+		<p class="used">Numbers Used:
+				<br><span></span></p>
+		<p class="tries">Tries: <span>0</span></p>
+		<h2>Guess the number between 0 and <span></span></h2>
+		<p class="response"></p>
+		<input type="number" class="input" name="input">
+		<button>Try</button>
+</div>
+
+<div id="page-3" class="page">
+		<h2>CONGRATULATIONS!<br><span>YOU WIN!</span></h2>
+		<p>It only took you... <span>0</span> tries!</p>
+		<p class="tip">Not bad... but can you beat that?</p>
+		<br>
+		<button onclick="console.log(window.location); window.location.href = window.location;">Play Again</button>
+		<p class="tries"></p>
+</div>
+	
+	<script src="js/game.js"></script>
+</body>
+</html>

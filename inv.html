@@ -1,0 +1,250 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width - device-width, intial scale=1" />
+<title>PIPBOY</title>
+<!--Boostrap-->
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<!--Tether-->
+<link rel="stylesheet" href="css/tether.min.css"/>
+<link rel="stylesheet" href="css/pipboy.css"/>
+</head>
+	
+<body>
+									<!-------------------------------------------MAIN NAVIGATION-------------------> 
+<!--navbar-expand-lg cho nut button-->
+<nav class="navbar navbar-toggleable navbar-expand-lg navbar-light"> 
+  
+  <!--Button cho cac thiet bi man hinh be hon-->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+  
+  <!--MENU-->
+  <div class="collapse navbar-collapse" id="navbarNav" >
+    <ul class="navbar-nav">
+      <li class="nav-item"> <!--"Active" == tab dang active--> 
+        <a class="nav-link" href="Index.html">STAT</a> </li>
+      <li class="nav-item active"> <a class="nav-link" href="inv.html">INV</a> </li>
+      <li class="nav-item"> <a class="nav-link" href="data.html">DATA</a> </li>
+      <li class="nav-item"> <a class="nav-link" href="map.html">MAP</a> </li>
+      <li class="nav-item"> <a class="nav-link" href="#">RADIO</a> </li>
+    </ul>
+  </div>
+  <!--END MENU--> 
+	
+</nav>
+									<!-------------------------------END MAIN NAVIGATION-------------------> 
+	
+									<!--------------------------MAIN CONTENT-------------------->
+	
+	<div class="container"><!--Container de can center cho content-->
+		<div class="row">
+			<div class="col-12"><!--col ko thi width ko doi, col - * thi width tu co dan cho phu hop voi thiet bi voi do dai = 12 cot-->
+				<ul class="nav nav-tabs">
+					<li class="nav-item">
+						<a href="#weapon" class="nav-link active" data-toggle="tab">
+							WEAPONS
+						</a>
+					</li>
+					<!--<li class="nav-item">
+						<a href="#special" class="nav-link" data-toggle="tab">
+							ARMOR
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="#perks" class="nav-link" data-toggle="tab">
+							AID
+						</a>
+					</li>-->
+				</ul>
+				
+				<!--CONTENT CUA CAC TAB, SWITCH = ID-->
+				<div class="tab-content">
+					<!--WEAPONS-->
+					<div class="tab-pane active" id="weapon" role="tabpanel">
+						<ul class="item-list float-left" id="list">
+							<li><a href="#" class="44_pistol">.44 pistol</a></li>
+							<li><a href="#" class="double_barrel_shotgun">10mm Pistol</a></li>
+							<li><a href="#" class="assault_rifle">Assault Rilfle</a></li>
+							<li><a href="#" class="institute_laser">Institute laser</a></li>
+							<li><a href="#" class="alien_blaster">Alien blaster pistol</a></li>
+							<li><a href="#" class="plasma_thrower"> Sentinel's Plasmacaster</a></li>
+						</ul>
+						<div class="img_holder float-right">
+							<img id ="wp_img" src="images/44_pistol.png" class="img-fluid"/>
+							</div>
+						
+						<div class="item-stats">
+							<div class="row-hightlight">
+								<div class="row">
+									<div class="col-12">
+								<span class="damage float-right">0</span>
+								<span class="float-left">Damage</span>
+									</div>
+								</div>
+							</div>
+							
+							<div class="row-hightlight">
+								<div class="row">
+									<div class="col-12">
+								<span class="ammo float-right">48</span>
+								<span class="float-left">Ammo</span>
+									</div>
+								</div>
+							</div>
+							
+							<div class="row-hightlight">
+								<div class="row">
+									<div class="col-12">
+								<span class="fire_rate float-right">0</span>
+								<span class="float-left">Fire Rate</span>
+									</div>
+								</div>
+							</div>
+							
+							<div class="row-hightlight">
+								<div class="row">
+									<div class="col-12">
+								<span class="range float-right">0</span>
+								<span class="float-left">Range</span>
+									</div>
+								</div>
+							</div>
+							
+							<div class="row-hightlight">
+								<div class="row">
+									<div class="col-12">
+								<span class="accuracy float-right">0</span>
+								<span class="float-left">Accuracy</span>
+									</div>
+								</div>
+							</div>
+							
+							<div class="row-hightlight">
+								<div class="row">
+									<div class="col-12">
+								<span class="weight float-right">0</span>
+								<span class="float-left">Weight</span>
+									</div>
+								</div>
+							</div>
+							
+							<div class="row-hightlight">
+								<div class="row">
+									<div class="col-12">
+								<span class="value float-right">0</span>
+								<span class="float-left">Value</span>
+									</div>
+								</div>	
+							</div>
+						</div>
+					
+						<form class="form-container float-left" id="custom_weapon">
+							<span style="font-size: 30px;">ADD CUSTOM WEAPONS:</span><br/><br/>
+							<!--HANG 1 - NAME-->
+							<div class="row">
+								<div class="col-12">
+						 			<div class="form-group">
+										<label for="wp_name">Name:</label>
+										<input type="text" class="form-control" id="wp_name" required="true">
+									</div>
+								</div>
+							</div>
+							
+							<!--HANG 2 - DAMAGE+ RATE + RANGE-->
+							<div class="row">
+								<div class="col-4">
+									<div class="form-group">
+						  				<label for="fire_rate">Damage</label>
+						  				<input type="number" class="form-control-sm" id="damage" required="true">
+									</div> 
+								</div>
+								
+								<div class="col-4">
+									<div class="form-group">
+						  				<label for="fire_rate">Fire Rate</label>
+						  				<input type="number" class="form-control-sm" id="fire_rate" required="true">
+									</div> 
+								</div>
+								
+								<div class="col-4">
+									<div class="form-group">
+									  <label for="range">Range</label>
+									  <input type="number" class="form-control-sm" id="range" required="true">
+									</div> 
+								</div>
+							</div>
+							
+							<!--HANG 3 - ACCURACY + WEIGHT + VALUE -->
+							<div class="row">
+								<div class="col-4">
+									<div class="form-group">
+						  				<label for="accuracy">Accuracy</label>
+						  				<input type="number" class="form-control-sm" id="accuracy" required="true">
+									</div> 
+								</div>
+								
+								<div class="col-4">
+									<div class="form-group">
+									  <label for="weight">Weight</label>
+									  <input type="number" class="form-control-sm" id="weight" required="true">
+									</div> 
+								</div>
+								
+								<div class="col-4">
+									<div class="form-group">
+									  <label for="value">Value</label>
+									  <input type="number" class="form-control-sm" id="value" required="true">
+									</div> 
+								</div>
+							</div>
+							
+							<!--HANG 3 - ACCURACY + WEIGHT + VALUE -->
+							<div class="row">
+								<div class="col-12">
+									<div class="form-group">
+						  				<label for="imgsrc">Image's url</label>
+						  				<input type="url" class="form-control" id="imgsrc">
+									</div> 
+								</div>
+								
+							</div>
+
+						<button type="submit" class="btn" id="add">Submit</button>
+						</form>
+	 		
+					</div>
+					<div class="tab-pane" id="special" role="tabpanel">SPECIAL</div>
+					<div class="tab-pane" id="perks" role="tabpanel">PERKS</div>
+				</div>
+				
+				<!--END CONTENT CUA CAC TAB-->
+			</div>
+		</div>
+	</div>
+	<!--FOOTER-------------->
+	<navbar class="navbar navbar-light pip-footer" id="footer">
+			<div class="col-3 weight-container">
+				<img src="images/weight.png" class="img-fluid " alt="weight"><span class="weight">81/300</span>
+			</div>
+			<div class="col-6">
+				<img src="images/caps.png" class="img-fluid " alt="">
+			<span>33</span>
+		</div>
+		<div class="col-3 text-right">
+		<img src="images/gun.png" class="img-fluid" alt="">
+			<span class="damage">18</span>
+		</div>
+	</navbar>
+	<!--END FOOTER----------->
+	
+						<!-------------------------------END MAIN CONTENT---------------------->
+	
+
+
+<script src="js/jquery-3.3.1.min.js"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/tether.min.js"></script> 
+<script src="js/pipboy.js"></script>
+</body>
+</html>
